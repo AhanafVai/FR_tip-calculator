@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Tip calculator app</title>
+
+    <style>
+      .input-icons {
+        position: relative;
+      }
+
+      .input-icons .i {
+        position: absolute;
+        width: 10px;
+        top: 14px;
+        left: 14px;
+      }
+    </style>
+  </head>
+  <body class="bg-lightGrayishCyan font-spaceMono">
+    <!-- Header -->
+    <article
+      class="text-center my-10 text-2xl tracking-[1rem] text-veryDarkCyan"
+    >
+      <h1>SPLI</h1>
+      <h1>TTER</h1>
+    </article>
+    <!-- Card container -->
+    <section>
+      <!-- Card -->
+      <div class="block p-6 bg-white rounded-2xl">
+        <!-- Bill input -->
+        <label for="number" class="block mt-3 mb-3 text-darkGrayishCyan text-sm"
+          >Bill</label
+        >
+        <div style="max-width: 400px; margin: auto">
+          <div class="input-icons">
+            <input
+              class="w-full text-right text-veryDarkCyan text-lg p-2 bg-veryLightGrayishCyan focus:outline-strongCyan"
+              type="number"
+            />
+            <img src="/images/icon-dollar.svg" alt="$" class="i" />
+          </div>
+        </div>
+        <!-- Select tip -->
+        <label for="number" class="block mt-5 mb-3 text-darkGrayishCyan text-sm"
+          >Select Tip %</label
+        >
+        <!-- Options -->
+        <div class="grid grid-cols-2 gap-4">
+          <button
+            class="bg-veryDarkCyan text-white text-xl rounded-lg py-3 active:bg-lightGrayishCyan focus:bg-strongCyan focus:text-veryDarkCyan"
+          >
+            5%
+          </button>
+          <button
+            class="bg-veryDarkCyan text-white text-xl rounded-lg py-3 active:bg-lightGrayishCyan focus:bg-strongCyan focus:text-veryDarkCyan"
+          >
+            10%
+          </button>
+          <button
+            class="bg-veryDarkCyan text-white text-xl rounded-lg py-3 active:bg-lightGrayishCyan focus:bg-strongCyan focus:text-veryDarkCyan"
+          >
+            15%
+          </button>
+          <button
+            class="bg-veryDarkCyan text-white text-xl rounded-lg py-3 active:bg-lightGrayishCyan focus:bg-strongCyan focus:text-veryDarkCyan"
+          >
+            20%
+          </button>
+          <button
+            class="bg-veryDarkCyan text-white text-xl rounded-lg py-3 active:bg-lightGrayishCyan focus:bg-strongCyan focus:text-veryDarkCyan"
+          >
+            25%
+          </button>
+          <input
+            type="number"
+            placeholder="Custom"
+            class="bg-veryLightGrayishCyan text-center text-veryDarkCyan text-xl placeholder:text-grayishCyan focus:outline-strongCyan"
+          />
+        </div>
+        <!-- Number of people -->
+        <label for="number" class="block mt-5 mb-3 text-darkGrayishCyan text-sm"
+          >Number of People</label
+        >
+        <div style="max-width: 400px; margin: auto">
+          <div class="input-icons">
+            <input
+              class="w-full text-right text-veryDarkCyan text-lg p-2 bg-veryLightGrayishCyan focus:outline-strongCyan"
+              type="number"
+            />
+            <img src="/images/icon-person.svg" alt="$" class="i" />
+          </div>
+        </div>
+        <!-- Calculation -->
+        <div class="block p-6 bg-veryDarkCyan rounded-xl space-y-10 my-10">
+          <!-- Tip amount -->
+          <div class="flex justify-between">
+            <article>
+              <p class="text-white text-sm">Tip Amount</p>
+              <small class="text-lightGrayishCyan text-xs">/ person</small>
+            </article>
+            <h1 class="text-strongCyan text-3xl">$0.00</h1>
+          </div>
+          <!-- Total amount -->
+          <div class="flex justify-between">
+            <article>
+              <p class="text-white text-sm">Total</p>
+              <small class="text-lightGrayishCyan text-xs">/ person</small>
+            </article>
+            <h1 class="text-strongCyan text-3xl">$0.00</h1>
+          </div>
+          <!-- Button -->
+          <div class="grid">
+            <button
+              class="text-veryDarkCyan bg-strongCyan text-xl rounded-lg py-3 active:bg-lightGrayishCyan"
+            >
+              RESET
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  </body>
+</html>
