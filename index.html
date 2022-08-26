@@ -61,6 +61,7 @@
             <div style="max-width: 400px; margin: auto">
               <div class="input-icons">
                 <input
+                  id="bill"
                   class="w-full text-right text-veryDarkCyan text-xl p-2 bg-veryLightGrayishCyan focus:outline-strongCyan placeholder:text-darkGrayishCyan"
                   type="number"
                   placeholder="0.00"
@@ -77,26 +78,36 @@
             <!-- Options -->
             <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
               <button
+                id="btn"
+                onclick="calculator(5)"
                 class="bg-veryDarkCyan text-white text-xl rounded-lg py-3 active:bg-lightGrayishCyan focus:bg-strongCyan focus:text-veryDarkCyan md:py-2 md:text-base"
               >
                 5%
               </button>
               <button
+                id="btn"
+                onclick="calculator(10)"
                 class="bg-veryDarkCyan text-white text-xl rounded-lg py-3 active:bg-lightGrayishCyan focus:bg-strongCyan focus:text-veryDarkCyan md:py-2 md:text-base"
               >
                 10%
               </button>
               <button
+                id="btn"
+                onclick="calculator(15)"
                 class="bg-veryDarkCyan text-white text-xl rounded-lg py-3 active:bg-lightGrayishCyan focus:bg-strongCyan focus:text-veryDarkCyan md:py-2 md:text-base"
               >
                 15%
               </button>
               <button
+                id="btn"
+                onclick="calculator(20)"
                 class="bg-veryDarkCyan text-white text-xl rounded-lg py-3 active:bg-lightGrayishCyan focus:bg-strongCyan focus:text-veryDarkCyan md:py-2 md:text-base"
               >
                 20%
               </button>
               <button
+                id="btn"
+                onclick="calculator(25)"
                 class="bg-veryDarkCyan text-white text-xl rounded-lg py-3 active:bg-lightGrayishCyan focus:bg-strongCyan focus:text-veryDarkCyan md:py-2 md:text-base"
               >
                 25%
@@ -116,6 +127,7 @@
             <div style="max-width: 400px; margin: auto">
               <div class="input-icons">
                 <input
+                  id="person"
                   class="w-full text-right text-veryDarkCyan text-xl p-2 bg-veryLightGrayishCyan focus:outline-strongCyan placeholder:text-darkGrayishCyan"
                   type="number"
                   placeholder="0.00"
@@ -134,7 +146,7 @@
                 <p class="text-white text-sm">Tip Amount</p>
                 <small class="text-lightGrayishCyan text-xs">/ person</small>
               </article>
-              <h1 class="text-strongCyan text-3xl">$0.00</h1>
+              <h1 id="tipPerPerson" class="text-strongCyan text-3xl">$0.00</h1>
             </div>
             <!-- Total amount -->
             <div class="flex justify-between">
@@ -156,6 +168,7 @@
         </div>
       </section>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
 
