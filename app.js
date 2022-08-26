@@ -1,8 +1,22 @@
+// default value
+let bill = 1;
+let person = 1;
+console.log(bill, person);
+
+// setBill
+const setBill = () => {
+  bill = parseFloat(billInput.value);
+  console.log(bill);
+};
+
+// setPerson
+const setPerson = () => {
+  person = parseFloat(personInput.value);
+  console.log(person);
+};
+
 // calculator
 const calculator = (tipVal) => {
-  let bill = parseFloat(billInput.value) || 1;
-  let person = parseFloat(personInput.value) || 1;
-
   // Person can't be zero
   if (person <= 0) {
     document.getElementById("warning").innerHTML = "can't be zero";
@@ -43,11 +57,11 @@ const calculator = (tipVal) => {
 
 // Bill Input
 let billInput = document.getElementById("bill");
-billInput.addEventListener("change", calculator);
+billInput.addEventListener("change", setBill);
 
 // Number of person
 let personInput = document.getElementById("person");
-personInput.addEventListener("change", calculator);
+personInput.addEventListener("change", setPerson);
 
 // Disabling a button
 let btnOff = document.getElementById("totalPerPerson").innerText;
