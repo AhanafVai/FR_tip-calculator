@@ -3,6 +3,7 @@ const calculator = (tipVal) => {
   let bill = parseFloat(billInput.value);
   let person = parseFloat(personInput.value);
 
+  // Person can't be zero
   if (person <= 0) {
     document.getElementById("warning").innerHTML = "can't be zero";
   } else {
@@ -28,30 +29,33 @@ const calculator = (tipVal) => {
     "totalPerPerson"
   ).innerText = `$${(totalPerPerson + parseInt(tipPerPerson)).toFixed(2)}`);
   showTotalPerPerson;
-  console.log(showTotalPerPerson);
+
+  // Enabling reset button
   if (document.getElementById("totalPerPerson").innerText != "$0.00") {
-    // Enabling a button
     document.querySelector("#reSet").disabled = false;
   }
+
   // Reset
   const reset = document.getElementById("reSet");
-
   reset.addEventListener("click", () => {
     document.getElementById("totalPerPerson").innerText = `$${"0.00"}`;
     document.getElementById("tipPerPerson").innerText = `$${"0.00"}`;
     document.getElementById("bill").value = "";
     document.getElementById("person").value = "";
+    document.getElementById("custom").value = "";
   });
 };
+
 // Bill Input
 let billInput = document.getElementById("bill");
 billInput.addEventListener("change", calculator);
+
 // Number of person
 let personInput = document.getElementById("person");
 personInput.addEventListener("change", calculator);
 
+// Disabling a button
 let btnOff = document.getElementById("totalPerPerson").innerText;
 if (btnOff == "$0.00") {
-  // Disabling a button
   document.querySelector("#reSet").disabled = true;
 }
