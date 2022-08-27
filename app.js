@@ -1,18 +1,15 @@
 // default value
 let bill = 1;
 let person = 1;
-console.log(bill, person);
 
 // setBill
 const setBill = () => {
   bill = parseFloat(billInput.value);
-  console.log(bill);
 };
 
 // setPerson
 const setPerson = () => {
   person = parseFloat(personInput.value);
-  console.log(person);
 };
 
 // calculator
@@ -28,22 +25,27 @@ const calculator = (tipVal) => {
   let tipPerPerson = parseFloat(
     (bill * (tipVal / 100)).toFixed(2) / person
   ).toFixed(2);
+
   // total per person
   let totalPerPerson = parseFloat((bill / person).toFixed(2) + tipPerPerson);
+
   //Show Tip per person
   let showTipPerPerson = (document.getElementById(
     "tipPerPerson"
   ).innerText = `$${tipPerPerson}`);
   showTipPerPerson;
+
   //Show Total per person
   let showTotalPerPerson = (document.getElementById(
     "totalPerPerson"
   ).innerText = `$${(totalPerPerson + parseInt(tipPerPerson)).toFixed(2)}`);
   showTotalPerPerson;
+
   // Enabling reset button
   if (document.getElementById("totalPerPerson").innerText != "$0.00") {
     document.querySelector("#reSet").disabled = false;
   }
+
   // Reset
   const reset = document.getElementById("reSet");
   reset.addEventListener("click", () => {
